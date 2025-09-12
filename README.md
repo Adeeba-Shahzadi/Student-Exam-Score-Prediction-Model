@@ -8,7 +8,7 @@ It uses **machine learning regression models** to train and evaluate predictions
 ## 🚀 Project Workflow
 
 1. **Data Cleaning**  
-   - Removed missing values (NaN).  
+   - Removed missing values (NaN) and Drop Outliers.
 
 2. **Exploratory Data Analysis (EDA)**  
    - Scatter plots to visualize relationships between factors and exam score.  
@@ -27,9 +27,9 @@ It uses **machine learning regression models** to train and evaluate predictions
    - Compared predictions with actual scores.  
 
 5. **Evaluation**  
-   - **Mean Absolute Error (MAE):** ~1.35  
-   - **Mean Squared Error (MSE):** ~4.74  
-   - **R² Score:** ~0.67 
+   - **Mean Absolute Error (MAE):** ~1.15  
+   - **Mean Squared Error (MSE):** ~2.06  
+   - **R² Score:** ~0.82 
 
 6. **Prediction vs Actual**  
    - Compared predicted values against actual exam scores to check performance.  
@@ -74,7 +74,7 @@ The dataset used is **StudentPerformanceFactors.csv**, containing features that 
 
 ## 📈 Results
 ![alt text](image.png)
-- The **Polynomial Regression model** gave an R² score of **0.67**, meaning it explains ~67% of the variance in exam scores.  
+- The **Polynomial Regression model** gave an R² score of **0.82**, meaning it explains ~82% of the variance in exam scores.  
 - Predictions were close to actual exam scores with low error values.  
 
 ---

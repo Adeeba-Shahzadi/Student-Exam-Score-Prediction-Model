@@ -5,13 +5,18 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 import matplotlib.pyplot as plt
 import seaborn as sb
+from scipy import stats
 
 # Load and clean data
 Data = pd.read_csv('StudentPerformanceFactors.csv')
-Clean_Data = Data.dropna(axis=0)
+No_NUll_Data = Data.dropna(axis=0)
+All_Factors = ['Hours_Studied','Attendance','Sleep_Hours','Previous_Scores','Tutoring_Sessions','Physical_Activity','Exam_Score']
+
+# Remove Outliers by z-score
+z_score = stats.zscore(No_NUll_Data[All_Factors])
+Clean_Data = No_NUll_Data[abs(z_score<3).all(axis=1)]
 
 # Correlation heatmap
-All_Factors = ['Hours_Studied','Attendance','Sleep_Hours','Previous_Scores','Tutoring_Sessions','Physical_Activity','Exam_Score']
 Check_Correlation = Clean_Data[All_Factors]
 plt.figure(figsize=(13,6))
 sb.heatmap(Check_Correlation.corr(), annot=True, cmap='coolwarm')
