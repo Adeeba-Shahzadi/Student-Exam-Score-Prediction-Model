@@ -1,6 +1,6 @@
 # 🎓 Student Exam Score Prediction
 
-This project predicts **students' exam scores** based on various performance factors such as study hours, attendance, and previous scores.  
+This project predicts **students' exam scores** based on various performance factors such as study hours, attendance, previous performance, and tutoring sessions.”
 It uses **machine learning regression models** to train and evaluate predictions, with data visualization to understand correlations.  
 
 ---
