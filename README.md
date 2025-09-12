@@ -73,7 +73,6 @@ The dataset used is **StudentPerformanceFactors.csv**, containing features that 
 ---
 
 ## 📈 Results
-![alt text](image.png)
 - The **Polynomial Regression model** gave an R² score of **0.82**, meaning it explains ~82% of the variance in exam scores.  
 - Predictions were close to actual exam scores with low error values.  
 
