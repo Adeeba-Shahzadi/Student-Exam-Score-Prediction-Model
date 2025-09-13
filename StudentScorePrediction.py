@@ -39,6 +39,17 @@ for col in Training_Factors:
 # Train-test split
 x_train, x_test, y_train, y_test = train_test_split(Input_Factors, Exam_Score, test_size=0.2, random_state=1)
 
+#Linear Regression
+model = LinearRegression()
+model.fit(x_train,y_train)
+
+#Evaluation
+y_pred = model.predict(x_test)
+print('Linear Regression')
+print("Mean Absolute Error (MAE):", mean_absolute_error(y_test, y_pred))
+print("Mean Squared Error (MSE):", mean_squared_error(y_test, y_pred))
+print("R² Score:", r2_score(y_test, y_pred))
+
 # Polynomial regression
 poly = PolynomialFeatures(degree=3)
 x_poly_train = poly.fit_transform(x_train)
@@ -54,8 +65,8 @@ result['Predicted_Exam_Score'] = y_poly_pred
 result['Actual_Exam_Score'] = y_test.values
 print(result.head(10))
 
-
 # Evaluation
+print('Polynomial Regression')
 print("MAE:", mean_absolute_error(y_test, y_poly_pred))
 print("MSE:", mean_squared_error(y_test, y_poly_pred))
 print("R²:", r2_score(y_test, y_poly_pred))
@@ -66,6 +77,6 @@ plt.scatter(y_test, y_poly_pred, color='blue')
 plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], 'r--')
 plt.xlabel('Actual Exam Score')
 plt.ylabel('Predicted Exam Score')
-plt.title('Predicted vs Actual')
+plt.title('Predicted vs Actual (Polynomial)')
 plt.show()
 

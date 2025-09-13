@@ -23,6 +23,7 @@ It uses **machine learning regression models** to train and evaluate predictions
    - These features were selected for training the model.  
 
 4. **Model Training**  
+   - Used **Linear Regression** for training.  
    - Used **Polynomial Regression (degree = 3)** for training.  
    - Compared predictions with actual scores.  
 
@@ -34,11 +35,14 @@ It uses **machine learning regression models** to train and evaluate predictions
 6. **Prediction vs Actual**  
    - Compared predicted values against actual exam scores to check performance.  
 
+7. **Linear VS POlynomial Regression**
+   -Comparison between Linear and Polynomail Regression
+
 ---
 
 ## 📊 Dataset Description
 
-The dataset used is **StudentPerformanceFactors.csv**, containing features that may influence a student’s exam performance.  
+The dataset from kaggle used is **StudentPerformanceFactors.csv**, containing features that may influence a student’s exam performance.  
 
 ### Columns:
 - `Hours_Studied` – Number of study hours per week  
@@ -73,24 +77,16 @@ The dataset used is **StudentPerformanceFactors.csv**, containing features that 
 ---
 
 ## 📈 Results
-![alt text](image.png)
 - The **Polynomial Regression model** gave an R² score of **0.82**, meaning it explains ~82% of the variance in exam scores.  
 - Predictions were close to actual exam scores with low error values.  
 
 ---
 
-## 🚀 Requirements
+## 📦 Installation  
 
-Make sure you have the following Python libraries installed before running the project:
-
-- pandas  
-- numpy  
-- matplotlib  
-- seaborn  
-- scikit-learn  
-
-You can install them all at once using:
-
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn
-
+1. Clone the repository (or download the project folder):  
+   ```bash
+   git clone <https://github.com/Adeeba-Shahzadi/Student-Exam-Score-Prediction-Model>
+   pip install -r requirements.txt
+   python student_score_prediction.py
+```
