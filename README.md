@@ -86,7 +86,8 @@ The dataset from kaggle used is **StudentPerformanceFactors.csv**, containing fe
 
 1. Clone the repository (or download the project folder):  
    ```bash
-   git clone <https://github.com/Adeeba-Shahzadi/Student-Exam-Score-Prediction-Model>
+   git clone <https://github.com/Adeeba-Shahzadi/StudentExamScorePrediction-RegressionModel>
    pip install -r requirements.txt
-   python student_score_prediction.py
+   python StudentScorePrediction.py
+   jupyter notebook Student_Score_Prediction.ipynb
 ```
